@@ -1,0 +1,339 @@
+name: Branch
+description: |-
+
+  APIs related to branch
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/branch
+    metadata:
+      groupName: Branch
+      groupDescription: |-
+
+        APIs related to branch
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+               "data": [
+                   {
+                       "id": 1,
+                       "name": "BrandName1",
+                       "branches_count": 5,
+                       "image": "images/branch1.jpg"
+                   },
+                   {
+                       "id": 2,
+                       "name": "BrandName2",
+                       "branches_count": 3,
+                       "image": "images/branch2.jpg"
+                   },
+                   ...
+               ]
+           }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/branch
+    metadata:
+      groupName: Branch
+      groupDescription: |-
+
+        APIs related to branch
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'The name of the branch.'
+        required: true
+        example: Ishonch
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      region:
+        name: region
+        description: 'The region of the branch.'
+        required: true
+        example: '"Toshkent"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      district:
+        name: district
+        description: 'The district of the branch.'
+        required: true
+        example: '"Chilanzor"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      image:
+        name: image
+        description: 'The image of the branch.'
+        required: true
+        example: '"images/1713348086.jpg"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+    cleanBodyParameters:
+      name: Ishonch
+      region: '"Toshkent"'
+      district: '"Chilanzor"'
+      image: '"images/1713348086.jpg"'
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+             "message": "Branch created successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/branch/{id}'
+    metadata:
+      groupName: Branch
+      groupDescription: |-
+
+        APIs related to branch
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the branch.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+               "id": 1,
+               "name": "BranchName",
+               "region": "Region",
+               "district": "District",
+               "image": "images/branch3.jpg"
+           }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/branch/{id}'
+    metadata:
+      groupName: Branch
+      groupDescription: |-
+
+        APIs related to branch
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the brand.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'The name of the branch.'
+        required: true
+        example: Ishonch
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      region:
+        name: region
+        description: 'The region of the branch.'
+        required: true
+        example: '"Qahqadaryo"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      district:
+        name: district
+        description: 'The district of the branch.'
+        required: true
+        example: '"Kitob"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      image:
+        name: image
+        description: 'The image of the branch.'
+        required: true
+        example: '"images/1713348086.jpg"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+    cleanBodyParameters:
+      name: Ishonch
+      region: '"Qahqadaryo"'
+      district: '"Kitob"'
+      image: '"images/1713348086.jpg"'
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+             "message": "Branch updated successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/branch/{id}'
+    metadata:
+      groupName: Branch
+      groupDescription: |-
+
+        APIs related to branch
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the branch.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+             "message": "Branch deleted successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
