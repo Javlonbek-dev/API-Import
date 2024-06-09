@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthenController;
 use App\Http\Controllers\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,4 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('/post', PostController::class);
-
+Route::post('/register', [AuthenController::class, 'register']);
+Route::post('/login', [AuthenController::class, 'login']);
+Route::middleware('auth:api')->get('/user', [AuthenController::class, 'user']);
