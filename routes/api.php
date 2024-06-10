@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthenController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,4 @@ Route::post('/register', [AuthenController::class, 'register']);
 Route::post('/login', [AuthenController::class, 'login']);
 Route::middleware('auth:api')->get('/user', [AuthenController::class, 'user']);
 Route::middleware('auth:api')->apiResource('/post', PostController::class);
+Route::middleware('auth:api')->apiResource('/products', ProductController::class);
