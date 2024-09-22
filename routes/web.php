@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ApiController;
+use App\Http\Controllers\ApiStatusController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\BranchController;
@@ -26,4 +28,5 @@ Route::get('/', function () {
 });
 Route::apiResource('/posts', PostController::class);
 Route::get('/', [PostController::class, 'index'])->name('posts.index');
-
+Route::get('/fetch-data', [ApiController::class, 'fetchData']);
+Route::get('/fetch-data1', [ApiStatusController::class, 'fetchData']);
